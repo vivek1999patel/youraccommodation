@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const ownerCtrl = require('../controllers/owners')
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/owners', ownerCtrl.index);
 
 module.exports = router;

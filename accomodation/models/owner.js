@@ -16,7 +16,8 @@ var ownerSchema = new mongoose.Schema({
     name: String, 
     email: String, 
     avatar: String, 
-    properties: [propertySchema]
+    properties: [propertySchema],
+    googleId: String
 }, {
     timestamps: true
 })
