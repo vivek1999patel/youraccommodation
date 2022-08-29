@@ -4,6 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// require express-session: the use of express-session is server-side way 
+// remebering browser session
+var session = require('express-session')
+// require Passport: the use of passport is to authenticate user
+// as the passport has different strategies which do most of the heavy-lifting
+// for us to authenticate
+var passport = require('passport')
+
 // load the env vars
 require('dotenv').config();
 
@@ -23,6 +31,14 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+// configure and mount session middleware
+app.use(session({
+  secret: 'YourAccommodation!',
+  resave: false,
+  saveUninitialized: true
+}))
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
