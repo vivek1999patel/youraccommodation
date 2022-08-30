@@ -4,3 +4,30 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+h2{
+    margin: 8% 0 20px 0;
+    font-size: 30px;
+    color: aliceblue;
+}
+
+#create-form input{
+    margin: 10px;
+    height: 4vh;
+    width: 22vw;
+    text-align: center;
+    font-size: 15px;
+}
+
+#create-form button{
+    margin: 5px 0 0 10px;
+    height: 4vh;
+    width: 22vw;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+
+

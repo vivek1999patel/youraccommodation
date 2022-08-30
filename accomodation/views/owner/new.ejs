@@ -13,14 +13,14 @@
         <nav id="nav">
           <h1 id="nav-h1">YOUR ACCOMMODATION</h1>
           <div>
-            <!-- <a class="homepage-links" href="/owners/new">ADD LISTING</a> -->
+            <a class="homepage-links" href="">ALL LISTING</a>
             <a class="homepage-links" href="/logout">LOG OUT</a>
           </div>
         </nav>
       </div>
       <h2>ADD YOUR LISTING</h2>
       <div>
-        <form action="/owners/<%= owner._id %>" method="POST">
+        <form action="/owners/<%= owner._id %>" method="POST" id="create-form">
             <input type="text" name="address" placeholder="Address"><br>
             <input type="date" name="moveInDate" placeholder="YYYY-MM-DD"><br>
             <input type="number" name="bedroom" placeholder="Bedrooms"><br>

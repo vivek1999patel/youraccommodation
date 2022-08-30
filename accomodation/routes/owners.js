@@ -4,6 +4,7 @@ const ownerCtrl = require('../controllers/owners')
 
 /* GET users listing. */
 router.get('/owners', ownerCtrl.index);
+// router.get('/owners/:id', ownerCtrl.index)
 // redirect user to create new listing page
 router.get('/owners/:id/new', ownerCtrl.new);
 // Create new listing

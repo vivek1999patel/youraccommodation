@@ -7,7 +7,6 @@ body {
   background-image: url("../images/img_5.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-position: center; */
 }
 
 a {
@@ -20,14 +19,31 @@ a {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  background-color: antiquewhite;
+  background-color: rgb(222, 180, 129);
   height: 8vh;
   width: 99vw;
   padding: 10px;
+  opacity: 0.5;
 }
 
 #nav-h1{
   display: inline-block;
+  color: rgb(106, 6, 6);
+  opacity: 100%;
+}
+
+#nav a{
+  color: rgb(106, 6, 6);
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#nav a:hover{
+  background-color: black;
+  color: white;
+  border-radius: 4px;
 }
 
 .homepage-links{
@@ -96,4 +112,11 @@ a {
 #list-div-div2 input{
   height: 40px;
   width: 20%;
+}
+
+p{
+  text-align: center;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  margin: 20% 10% 0 10%;
 }
