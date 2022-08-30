@@ -3,9 +3,12 @@
   padding: 0px;
 }
 
-/* body {
-  background-image: url("../../images/img_!.jpeg");
-} */
+body {
+  background-image: url("../images/img_5.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+}
 
 a {
   color: #00B7FF;
