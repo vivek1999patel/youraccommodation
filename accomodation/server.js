@@ -3,7 +3,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 // require express-session: the use of express-session is server-side way 
 // remebering browser session
 var session = require('express-session')
@@ -11,6 +10,7 @@ var session = require('express-session')
 // as the passport has different strategies which do most of the heavy-lifting
 // for us to authenticate
 var passport = require('passport')
+var methodOverride = require('method-override');
 
 // load the env vars
 require('dotenv').config();
@@ -29,6 +29,7 @@ require('./config/passport')
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(methodOverride('_method'));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -42,6 +43,20 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(function(req, res, next) {
+  if(req.query._method == 'DELETE') {
+    req.method = 'DELETE'
+    req.url = req.path
+  }
+  next();
+})
+app.use(function(req, res, next) {
+  if(req.query._method == 'PUT') {
+    req.method = 'PUT'
+    req.url = req.path
+  }
+  next();
+})
 
 app.use('/', indexRouter);
 app.use('/', ownersRouter);

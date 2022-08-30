@@ -1,21 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Owner Home-Page</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
     <div>
-        <nav id="nav">
-          <h1 id="nav-h1">YOUR ACCOMMODATION</h1>
-          <div>
-            <a class="homepage-links" href="/owners/new">ADD LISTING</a>
-            <a class="homepage-links" href="/logout">LOG OUT</a>
+      <nav id="nav">
+        <h1 id="nav-h1">YOUR ACCOMMODATION</h1>
+        <div>
+          <a class="homepage-links" href="/owners/<%= owner._id %>/new"
+            >ADD LISTING</a
+          >
+          <a class="homepage-links" href="/logout">LOG OUT</a>
+        </div>
+      </nav>
+    </div>
+    <div id="list">
+      <% owner.properties.forEach(function(p) { %>
+      <div class="list-div">
+        <div id="list-div-div1">
+          <div id="list-div-div1-image"></div>
+          <div id="list-div-div1-detail">
+            <div>Address: <%= p.address %></div>
+            <div>Move-In-Date: <%= p.moveInDate %></div>
+            <div>Bedrooms: <%= p.bedroom %></div>
+            <div>bathrooms: <%= p.bathroom %></div>
+            <div>Utilities: <%= p.utility %></div>
+            <div>Furnished: <%= p.furnish %></div>
+            <div>Parking: <%= p.parking %></div>
           </div>
-        </nav>
+        </div>
+        <div id="list-div-div2">
+          <a href="/owners/<%= p.id %>">Edit</a>
+          <a href="/owners/<%= p._id %>?_method=DELETE">Delete</a>
+        </div>
       </div>
-</body>
+      <% }) %>
+    </div>
+    <!-- <div id="list">
+        <div class="list-div">
+          <div id="list-div-div1">
+            <div id="list-div-div1-image"></div>
+            <div id="list-div-div1-detail">
+              <div>Address: 18 Boathouse Road</div>
+              <div>Move-In-Date: 2022-09-01</div>
+              <div>Bedrooms: 5</div>
+              <div>bathrooms: 3</div>
+              <div>Utilities: Yes</div>
+              <div>Furnished: Yes</div>
+              <div>Parking: 4</div>
+            </div>
+          </div>
+          <div id="list-div-div2">
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+        </div>
+      </div> -->
+  </body>
 </html>

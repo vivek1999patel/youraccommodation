@@ -20,14 +20,14 @@
       </div>
       <h2>ADD YOUR LISTING</h2>
       <div>
-        <form action="/owners/<%= owner._id %>" method="POST">
-            <input type="text" name="address" placeholder="Address"><br>
-            <input type="date" name="moveInDate" placeholder="YYYY-MM-DD"><br>
-            <input type="number" name="bedroom" placeholder="Bedrooms"><br>
-            <input type="number" name="bathroom" placeholder="bathrooms"><br>
-            <input type="text" name="utility" placeholder="Utilities Included"><br>
-            <input type="text" name="furnish" placeholder="Furnished"><br>
-            <input type="number" name="parking" placeholder="Parking"><br>
+        <form action="/owners/<%= property.id %>?_method=PUT" method="POST">
+            <input type="text" name="address" value="<%= property.address %>"><br>
+            <input type="date" name="moveInDate" value="<%= property.moveInDate %>"><br>
+            <input type="number" name="bedroom" value="<%= property.bedroom %>"><br>
+            <input type="number" name="bathroom" value="<%= property.bathroom %>"><br>
+            <input type="text" name="utility" value="<%= property.utility %>"><br>
+            <input type="text" name="furnish" value="<%= property.furnish %>"><br>
+            <input type="number" name="parking" value="<%= property.parking %>"><br>
             <button>Submit</button>
         </form>
       </div>

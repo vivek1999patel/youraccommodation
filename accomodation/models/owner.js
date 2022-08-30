@@ -5,8 +5,8 @@ var propertySchema = new mongoose.Schema({
     moveInDate: Date,
     bedroom: Number, 
     bathroom: Number, 
-    utility: Boolean, 
-    furnish: Boolean, 
+    utility: String, 
+    furnish: String, 
     parking: Number
 }, {
     timestamps: true
