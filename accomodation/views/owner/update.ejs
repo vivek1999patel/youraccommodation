@@ -22,7 +22,7 @@
       <div>
         <form action="/owners/<%= property.id %>?_method=PUT" method="POST" id="create-form">
             <input type="text" name="address" value="<%= property.address %>" required autocomplete="off"><br>
-            <input type="date" name="moveInDate" value="<%= property.moveInDate.toLocaleDateString() %>" min="2022-08-31" mac="x
+            <input type="datetime-local" name="moveInDate" value="<%= property.moveInDate.toLocaleDateString() %>" min="2022-08-31" max="
             2022-12-31" required autocomplete="off"><br>
             <input type="number" name="bedroom" value="<%= property.bedroom %>" min="1" required autocomplete="off"><br>
             <input type="number" name="bathroom" value="<%= property.bathroom %>" min="1" required autocomplete="off"><br>

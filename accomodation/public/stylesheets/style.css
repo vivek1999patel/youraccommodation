@@ -88,6 +88,11 @@ a {
   margin: 2px;
 }
 
+#list-div-div1-image img{
+  height: 220px;
+  width: 100%;
+}
+
 #list-div-div1-detail{
   height: 230px;
   width: 55%;

@@ -20,7 +20,7 @@
       </div>
       <h2>ADD YOUR LISTING</h2>
       <div>
-        <form action="/owners/<%= owner._id %>" method="POST" id="create-form">
+        <form action="/owners/<%= owner._id %>" method="POST" id="create-form" enctype="multipart/form-data">
             <input type="text" name="address" placeholder="Address" required autocomplete="off"><br>
             <input type="date" name="moveInDate" placeholder="YYYY-MM-DD" min="2022-08-31" max="2022-12-31" required autocomplete="off"><br>
             <input type="number" name="bedroom" placeholder="Bedrooms" min="1" required autocomplete="off"><br>
@@ -28,6 +28,8 @@
             <input type="text" name="utility" placeholder="Utilities Included?" required autocomplete="off"><br>
             <input type="text" name="furnish" placeholder="Furnished?" required autocomplete="off"><br>
             <input type="number" name="parking" placeholder="Parking" min="0" required autocomplete="off"><br>
+            <input type="file" name='image'><br>
+            <!-- <input type="submit"> -->
             <button>Submit</button>
         </form>
       </div>

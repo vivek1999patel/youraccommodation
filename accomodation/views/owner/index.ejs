@@ -23,7 +23,9 @@
       <% owner.properties.forEach(function(p) { %>
       <div class="list-div">
         <div id="list-div-div1">
-          <div id="list-div-div1-image"></div>
+          <div id="list-div-div1-image">
+            <img src="<%= p.image %>" alt="Image">
+          </div>
           <div id="list-div-div1-detail">
             <div>Address: <%= p.address %></div>
             <div>Move-In-Date: <%= p.moveInDate.toLocaleDateString() %></div>

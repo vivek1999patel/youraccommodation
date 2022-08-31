@@ -7,7 +7,8 @@ var propertySchema = new mongoose.Schema({
     bathroom: Number, 
     utility: String, 
     furnish: String, 
-    parking: Number
+    parking: Number,
+    image: String
 }, {
     timestamps: true
 });

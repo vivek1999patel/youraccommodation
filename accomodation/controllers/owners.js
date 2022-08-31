@@ -1,4 +1,6 @@
 const Owner = require('../models/owner');
+const request = require('request')
+const fs = require('fs')
 
 module.exports = {
     index, 
@@ -9,34 +11,55 @@ module.exports = {
     update
 }
 
+function base64_encode(image) {
+    // read binary data
+    var binary = fs.readFileSync(image);
+    // convert binary to base64 data type
+    return binary.toString('base64');
+}
+
 function index(req, res) {
     console.log(req.user)
     Owner.findById(req.user._id, function(err, owner) {
         if(err) return console.log(err)
-        // console.log(owner)
-        console.log(owner.properties)
         res.render('owner/index', {owner})
     })
 }
 
 function newOne(req, res) {
-    // console.log(req.params.id)
     Owner.findById(req.params.id, function(err, owner) {
-        // console.log(owner)
         if(err) return console.log(err)
         res.render('owner/new', {owner})
     })
 }
 
 function create(req, res) {
+    let image = base64_encode(req.file.path)
+    const options = {
+        method: 'POST',
+        url: 'https://api.imgur.com/3/image',
+        headers: {
+          Authorization: `Client-ID ${process.env.IMGUR_CLIENT_ID}`,
+        },
+        formData: {
+          image: image,
+          type: 'base64'
+        },
+      };    
     Owner.findById(req.params.id, function(err, owner) {
-        // console.log(owner)
         if(err) return console.log(err)
-        owner.properties.push(req.body)
-        owner.save(function(err) {
-            if(err) console.log(err)
-            // console.log(owner.properties)
-            res.render('owner/new', {owner})
+        request(options, function(err, response) {
+            if(err) return console.log(err);
+            let body = JSON.parse(response.body)
+            owner.properties.push(req.body)
+            // console.log(body)
+            // console.log(owner.properties[owner.properties._id])
+            owner.properties.image = body.data.link;
+            owner.save(function(err) {
+                if(err) console.log(err)
+                // console.log(owner.properties)
+                res.render('owner/new', {owner})
+            })
         })
     })
 }
@@ -61,7 +84,6 @@ function edit(req, res) {
 
 function update(req, res){
     Owner.findOne({'properties._id' : req.params.id}, function(err, owner) {
-        // console.log("Checking For Owner", ownerProperty)
         let property = owner.properties.id(req.params.id)
         console.log("Before Changes", property)
         property.address = req.body.address
@@ -72,7 +94,6 @@ function update(req, res){
         property.furnish = req.body.furnish
         property.parking = req.body.parking
         console.log(property)
-        // console.log("After Checking For Owner", ownerProperty)
         owner.save(function(err){
             res.render('owner/index', {owner})
         })
