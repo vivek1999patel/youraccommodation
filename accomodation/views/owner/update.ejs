@@ -21,14 +21,15 @@
       <h2>ADD YOUR LISTING</h2>
       <div>
         <form action="/owners/<%= property.id %>?_method=PUT" method="POST" id="create-form">
-            <input type="text" name="address" value="<%= property.address %>"><br>
-            <input type="date" name="moveInDate" value="<%= property.moveInDate.toLocaleDateString() %>"><br>
-            <input type="number" name="bedroom" value="<%= property.bedroom %>"><br>
-            <input type="number" name="bathroom" value="<%= property.bathroom %>"><br>
-            <input type="text" name="utility" value="<%= property.utility %>"><br>
-            <input type="text" name="furnish" value="<%= property.furnish %>"><br>
-            <input type="number" name="parking" value="<%= property.parking %>"><br>
-            <button>Submit</button>
+            <input type="text" name="address" value="<%= property.address %>" required autocomplete="off"><br>
+            <input type="date" name="moveInDate" value="<%= property.moveInDate.toLocaleDateString() %>" min="2022-08-31" mac="x
+            2022-12-31" required autocomplete="off"><br>
+            <input type="number" name="bedroom" value="<%= property.bedroom %>" min="1" required autocomplete="off"><br>
+            <input type="number" name="bathroom" value="<%= property.bathroom %>" min="1" required autocomplete="off"><br>
+            <input type="text" name="utility" value="<%= property.utility %>" required autocomplete="off"><br>
+            <input type="text" name="furnish" value="<%= property.furnish %>" required autocomplete="off"><br>
+            <input type="number" name="parking" value="<%= property.parking %>" required autocomplete="off"><br>
+            <button>Update</button>
         </form>
       </div>
 </body>

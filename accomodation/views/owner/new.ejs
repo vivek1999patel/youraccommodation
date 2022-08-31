@@ -13,7 +13,7 @@
         <nav id="nav">
           <h1 id="nav-h1">YOUR ACCOMMODATION</h1>
           <div>
-            <a class="homepage-links" href="">ALL LISTING</a>
+            <a class="homepage-links" href="/owners">ALL LISTING</a>
             <a class="homepage-links" href="/logout">LOG OUT</a>
           </div>
         </nav>
@@ -21,13 +21,13 @@
       <h2>ADD YOUR LISTING</h2>
       <div>
         <form action="/owners/<%= owner._id %>" method="POST" id="create-form">
-            <input type="text" name="address" placeholder="Address"><br>
-            <input type="date" name="moveInDate" placeholder="YYYY-MM-DD"><br>
-            <input type="number" name="bedroom" placeholder="Bedrooms"><br>
-            <input type="number" name="bathroom" placeholder="bathrooms"><br>
-            <input type="text" name="utility" placeholder="Utilities Included"><br>
-            <input type="text" name="furnish" placeholder="Furnished"><br>
-            <input type="number" name="parking" placeholder="Parking"><br>
+            <input type="text" name="address" placeholder="Address" required autocomplete="off"><br>
+            <input type="date" name="moveInDate" placeholder="YYYY-MM-DD" min="2022-08-31" max="2022-12-31" required autocomplete="off"><br>
+            <input type="number" name="bedroom" placeholder="Bedrooms" min="1" required autocomplete="off"><br>
+            <input type="number" name="bathroom" placeholder="bathrooms" min="1" required autocomplete="off"><br>
+            <input type="text" name="utility" placeholder="Utilities Included?" required autocomplete="off"><br>
+            <input type="text" name="furnish" placeholder="Furnished?" required autocomplete="off"><br>
+            <input type="number" name="parking" placeholder="Parking" min="0" required autocomplete="off"><br>
             <button>Submit</button>
         </form>
       </div>

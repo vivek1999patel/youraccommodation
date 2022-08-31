@@ -10,8 +10,8 @@ module.exports = {
 }
 
 function index(req, res) {
-    // console.log(req.user.googleId)
-    Owner.findOne({googleId : req.user.googleId}, function(err, owner) {
+    console.log(req.user)
+    Owner.findById(req.user._id, function(err, owner) {
         if(err) return console.log(err)
         // console.log(owner)
         console.log(owner.properties)
