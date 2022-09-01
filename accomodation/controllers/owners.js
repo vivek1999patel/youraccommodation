@@ -53,12 +53,8 @@ function create(req, res) {
             let body = JSON.parse(response.body)
             req.body.image = body.data.link;
             owner.properties.push(req.body)
-            // console.log(body)
-            // console.log(owner.properties[owner.properties._id])
-            // owner.properties[0].image = body.data.link;
             owner.save(function(err) {
                 if(err) console.log(err)
-                // console.log(owner.properties)
                 res.render('owner/new', {owner})
             })
         })

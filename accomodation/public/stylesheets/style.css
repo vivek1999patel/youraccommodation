@@ -3,11 +3,11 @@
   padding: 0px;
 }
 
-body {
-  background-image: url("../images/img_5.jpeg");
-  background-repeat: no-repeat;
+/* body {
+  background-image: url("../images/img_5.jpeg"); */
+  /* background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 a {
   color: #00B7FF;
@@ -51,25 +51,32 @@ a {
 } */
 
 #list {
-  height: 150vh;
+  height: 120vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  /* justify-content: space-around; */
   align-items: center;
   flex-wrap: wrap;
-  background-color: white;
+  background-color: black;
 }
 
 .list-div{
-  height: 280px;
+  height: 285px;
   width: 400px;
+  margin: 40px 20px 40px 20px;
   background-color: white;
-  border: 2px solid grey;
+  border: 2px solid rgb(187, 183, 183);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.list-div:hover {
+  background-color: rgb(150, 146, 146);
+  border: 1px solid black;
+  color: white;
 }
 
 #list-div-div1{
@@ -84,7 +91,7 @@ a {
 #list-div-div1-image{
   height: 230px;
   width: 40%;
-  margin: 2px;
+  margin: 7px 5px 5px 5px;
 }
 
 #list-div-div1-image img{
@@ -101,6 +108,8 @@ a {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
 }
 
 #list-div-div2{
@@ -112,11 +121,24 @@ a {
   align-items: center;
 }
 
-#list-div-div2 input{
-  height: 40px;
+#list-div-div2 a{
+  height: 28px;
   width: 20%;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(91, 91, 238);
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 3px 0px 3px;
+  font-size: 18px;
+  margin-bottom: 2px;
 }
 
+#list-div-div2 a:hover {
+  background-color: white;
+  border: 2px solid rgb(91, 91, 238);
+  color: rgb(91, 91, 238);
+}
 
 p{
   text-align: center;

@@ -3,12 +3,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: black;
 }
 
 h2{
-    margin: 8% 0 20px 0;
+    margin: 6% 0 20px 0;
     font-size: 30px;
-    color: aliceblue;
+    color: rgb(53, 111, 162);
 }
 
 #create-form input{
@@ -16,8 +17,11 @@ h2{
     height: 4vh;
     width: 22vw;
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
+}
 
+#create-form input:focus{
+    background-color: lightblue;
 }
 
 #create-form button{
@@ -26,8 +30,17 @@ h2{
     width: 22vw;
     text-align: center;
     border: none;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 5px;
+    background-color: white;
+    color: rgb(91, 91, 238);
+    border: 1px solid rgb(91, 91, 238);
+}
+
+#create-form button:hover {
+    color: white;
+    background-color: rgb(91, 91, 238);
+    border: 1px solid white;
 }
 
 
