@@ -1,0 +1,36 @@
+#nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(222, 180, 129);
+    height: 8vh;
+    width: 99vw;
+    padding: 10px;
+    opacity: 0.5;
+  }
+  
+  #nav-h1{
+    display: inline-block;
+    color: rgb(106, 6, 6);
+    opacity: 100%;
+  }
+  
+  #nav a{
+    color: rgb(106, 6, 6);
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  #nav a:hover{
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .homepage-links{
+    margin: 10px;
+  }

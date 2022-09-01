@@ -13,7 +13,7 @@ a {
   color: #00B7FF;
 }
 
-#nav{
+/* #nav{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -48,24 +48,25 @@ a {
 
 .homepage-links{
   margin: 10px;
-}
+} */
 
 #list {
-  background-color: aqua;
-  border: 2px solid black;
   height: 150vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  background-color: white;
 }
 
 .list-div{
-  height: 300px;
-  width: 450px;
-  background-color: rgb(30, 142, 30);
-  border: 2px solid black;
+  height: 280px;
+  width: 400px;
+  background-color: white;
+  border: 2px solid grey;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,7 +75,6 @@ a {
 #list-div-div1{
   height: 240px;
   width: 100%;
-  border: 2px solid red;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -84,19 +84,18 @@ a {
 #list-div-div1-image{
   height: 230px;
   width: 40%;
-  border: 1px solid black;
   margin: 2px;
 }
 
 #list-div-div1-image img{
   height: 220px;
   width: 100%;
+  border-radius: 15px;
 }
 
 #list-div-div1-detail{
   height: 230px;
   width: 55%;
-  border: 1px solid black;
   margin: 2px;
   display: flex;
   flex-direction: column;
@@ -107,7 +106,6 @@ a {
 #list-div-div2{
   height: 60px;
   width: 100%;
-  border: 2px solid red;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -118,6 +116,7 @@ a {
   height: 40px;
   width: 20%;
 }
+
 
 p{
   text-align: center;

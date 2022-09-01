@@ -51,10 +51,11 @@ function create(req, res) {
         request(options, function(err, response) {
             if(err) return console.log(err);
             let body = JSON.parse(response.body)
+            req.body.image = body.data.link;
             owner.properties.push(req.body)
             // console.log(body)
             // console.log(owner.properties[owner.properties._id])
-            owner.properties.image = body.data.link;
+            // owner.properties[0].image = body.data.link;
             owner.save(function(err) {
                 if(err) console.log(err)
                 // console.log(owner.properties)
