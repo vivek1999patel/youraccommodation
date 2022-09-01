@@ -12,17 +12,32 @@ h2{
     color: rgb(53, 111, 162);
 }
 
+#create-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+}
+
 #create-form input{
-    margin: 10px;
+    margin: 5px;
     height: 4vh;
     width: 22vw;
     text-align: center;
     font-size: 17px;
 }
 
+#create-form label{
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
 #create-form input:focus{
     background-color: lightblue;
 }
+
 
 #create-form button{
     margin: 5px 0 0 10px;

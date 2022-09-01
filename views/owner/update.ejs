@@ -20,16 +20,16 @@
         <nav id="nav">
           <h1 id="nav-h1">YOUR ACCOMMODATION</h1>
           <div>
-            <!-- <a class="homepage-links" href="/owners/new">ADD LISTING</a> -->
+            <a class="homepage-links" href="/owners">ALL LISTING</a>
             <a class="homepage-links" href="/logout">LOG OUT</a>
           </div>
         </nav>
       </div>
-      <h2>ADD YOUR LISTING</h2>
+      <h2>UPDATE YOUR LISTING</h2>
       <div>
         <form action="/owners/<%= property.id %>?_method=PUT" method="POST" id="create-form">
             <input type="text" name="address" value="<%= property.address %>" required autocomplete="off"><br>
-            <input type="datetime-local" name="moveInDate" value="<%= property.moveInDate.toLocaleDateString() %>" min="2022-08-31" max="
+            <input type="date" name="moveInDate" value="<%= property.moveInDate.toLocaleDateString() %>" min="2022-08-31" max="
             2022-12-31" required autocomplete="off"><br>
             <input type="number" name="bedroom" value="<%= property.bedroom %>" min="1" required autocomplete="off"><br>
             <input type="number" name="bathroom" value="<%= property.bathroom %>" min="1" required autocomplete="off"><br>
