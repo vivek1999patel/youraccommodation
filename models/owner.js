@@ -8,6 +8,7 @@ var propertySchema = new mongoose.Schema({
     utility: String, 
     furnish: String, 
     parking: Number,
+    rent: Number,
     image: String
 }, {
     timestamps: true

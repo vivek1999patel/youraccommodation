@@ -90,6 +90,7 @@ function update(req, res){
         property.utility = req.body.utility
         property.furnish = req.body.furnish
         property.parking = req.body.parking
+        property.rent = req.body.rent
         console.log(property)
         owner.save(function(err){
             res.render('owner/index', {owner})
