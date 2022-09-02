@@ -1,41 +1,42 @@
-#nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    background-color: white;
-    height: 10vh;
-    width: 98vw;
-    padding: 10px;
-    opacity: 0.5;
-  }
-  
-  #nav-h1{
-    display: inline-block;
-    color: rgb(106, 6, 6);
-    opacity: 100%;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 30px;
-    margin-left: 20px;
-  }
-  
-  #nav a{
-    color: rgb(106, 6, 6);
-    text-decoration: none;
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-  
-  #nav a:hover{
-    background-color: black;
-    color: white;
-    border-radius: 4px;
-  }
-  
-  .homepage-links{
-    margin: 10px;
-  }
+#nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  height: 10vh;
+  width: 98vw;
+  padding: 10px;
+  opacity: 0.5;
+}
+
+#nav-h1 {
+  display: inline-block;
+  color: rgb(106, 6, 6);
+  opacity: 100%;
+  font-family: "Roboto Mono", monospace;
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+#nav a {
+  color: rgb(106, 6, 6);
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#nav a:hover {
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+}
+
+.homepage-links {
+  margin: 10px;
+}

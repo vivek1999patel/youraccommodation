@@ -1,62 +1,57 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 }
 
-h2{
-    margin: 6% 0 20px 0;
-    font-size: 30px;
-    color: rgb(53, 111, 162);
+h2 {
+  margin: 6% 0 20px 0;
+  font-size: 30px;
+  color: rgb(53, 111, 162);
 }
 
-#create-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background-color: black; */
+#create-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#create-form input{
-    margin: 5px;
-    height: 4vh;
-    width: 22vw;
-    text-align: center;
-    font-size: 17px;
+#create-form input {
+  margin: 5px;
+  height: 4vh;
+  width: 22vw;
+  text-align: center;
+  font-size: 17px;
 }
 
-#create-form label{
-    margin-left: 10px;
-    color: white;
-    font-size: 20px;
+#create-form label {
+  margin-left: 10px;
+  color: white;
+  font-size: 20px;
 }
 
-#create-form input:focus{
-    background-color: lightblue;
+#create-form input:focus {
+  background-color: lightblue;
 }
 
-
-#create-form button{
-    margin: 5px 0 0 10px;
-    height: 4vh;
-    width: 22vw;
-    text-align: center;
-    border: none;
-    font-size: 18px;
-    border-radius: 5px;
-    background-color: white;
-    color: rgb(91, 91, 238);
-    border: 1px solid rgb(91, 91, 238);
+#create-form button {
+  margin: 5px 0 0 10px;
+  height: 4vh;
+  width: 22vw;
+  text-align: center;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: white;
+  color: rgb(91, 91, 238);
+  border: 1px solid rgb(91, 91, 238);
 }
 
 #create-form button:hover {
-    color: white;
-    background-color: rgb(91, 91, 238);
-    border: 1px solid white;
+  color: white;
+  background-color: rgb(91, 91, 238);
+  border: 1px solid white;
 }
-
-
-

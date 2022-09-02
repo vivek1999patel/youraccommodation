@@ -1,27 +1,33 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-var propertySchema = new mongoose.Schema({
+var propertySchema = new mongoose.Schema(
+  {
     address: String,
     moveInDate: Date,
-    bedroom: Number, 
-    bathroom: Number, 
-    utility: String, 
-    furnish: String, 
+    bedroom: Number,
+    bathroom: Number,
+    utility: String,
+    furnish: String,
     parking: Number,
     rent: Number,
-    image: String
-}, {
-    timestamps: true
-});
+    image: String,
+  },
+  {
+    timestamps: true,
+  }
+);
 
-var ownerSchema = new mongoose.Schema({
-    name: String, 
-    email: String, 
-    avatar: String, 
+var ownerSchema = new mongoose.Schema(
+  {
+    name: String,
+    email: String,
+    avatar: String,
     properties: [propertySchema],
-    googleId: String
-}, {
-    timestamps: true
-})
+    googleId: String,
+  },
+  {
+    timestamps: true,
+  }
+);
 
-module.exports = mongoose.model('Owner', ownerSchema);
+module.exports = mongoose.model("Owner", ownerSchema);

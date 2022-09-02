@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add New Listing</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/stylesheets/style_new.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/style_new.css" />
     <link rel="stylesheet" href="/stylesheets/style_nav.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,33 +14,91 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap"
       rel="stylesheet"
     />
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <nav id="nav">
-          <h1 id="nav-h1">YOUR ACCOMMODATION</h1>
-          <div>
-            <a class="homepage-links" href="/owners">ALL LISTING</a>
-            <a class="homepage-links" href="/logout">LOG OUT</a>
-          </div>
-        </nav>
-      </div>
-      <h2>ADD YOUR LISTING</h2>
-      <div>
-        <form action="/owners/<%= owner._id %>" method="POST" id="create-form" enctype="multipart/form-data">
-            <input type="text" name="address" placeholder="Address" required autocomplete="off"><br>
-            <input type="date" name="moveInDate" placeholder="YYYY-MM-DD" min="2022-08-31" max="2022-12-31" required autocomplete="off"><br>
-            <input type="number" name="bedroom" placeholder="Bedrooms" min="1" required autocomplete="off"><br>
-            <input type="number" name="bathroom" placeholder="bathrooms" min="1" required autocomplete="off"><br>
-            <input type="text" name="utility" placeholder="Utilities Included?Yes Or No" required autocomplete="off"><br>
-            <input type="text" name="furnish" placeholder="Furnished?Yes Or No" required autocomplete="off"><br>
-            <input type="number" name="parking" placeholder="Parking" min="0" required autocomplete="off"><br>
-            <input type="number" name="rent" placeholder="Rent" min="0" required autocomplete="off"><br>
-            <label for="Image">Image</label>
-            <input type="file" name='image' required id="image"><br>
-            <!-- <input type="submit"> -->
-            <button>ADD LISTING</button>
-        </form>
-      </div>
-</body>
+      <nav id="nav">
+        <h1 id="nav-h1">YOUR ACCOMMODATION</h1>
+        <div>
+          <a class="homepage-links" href="/owners">ALL LISTING</a>
+          <a class="homepage-links" href="/logout">LOG OUT</a>
+        </div>
+      </nav>
+    </div>
+    <h2>ADD YOUR LISTING</h2>
+    <div>
+      <form
+        action="/owners/<%= owner._id %>"
+        method="POST"
+        id="create-form"
+        enctype="multipart/form-data"
+      >
+        <input
+          type="text"
+          name="address"
+          placeholder="Address"
+          required
+          autocomplete="off"
+        /><br />
+        <input
+          type="date"
+          name="moveInDate"
+          placeholder="YYYY-MM-DD"
+          min="2022-08-31"
+          max="2022-12-31"
+          required
+          autocomplete="off"
+        /><br />
+        <input
+          type="number"
+          name="bedroom"
+          placeholder="Bedrooms"
+          min="1"
+          required
+          autocomplete="off"
+        /><br />
+        <input
+          type="number"
+          name="bathroom"
+          placeholder="bathrooms"
+          min="1"
+          required
+          autocomplete="off"
+        /><br />
+        <input
+          type="text"
+          name="utility"
+          placeholder="Utilities Included?Yes Or No"
+          required
+          autocomplete="off"
+        /><br />
+        <input
+          type="text"
+          name="furnish"
+          placeholder="Furnished?Yes Or No"
+          required
+          autocomplete="off"
+        /><br />
+        <input
+          type="number"
+          name="parking"
+          placeholder="Parking"
+          min="0"
+          required
+          autocomplete="off"
+        /><br />
+        <input
+          type="number"
+          name="rent"
+          placeholder="Rent"
+          min="0"
+          required
+          autocomplete="off"
+        /><br />
+        <label for="Image">Image</label>
+        <input type="file" name="image" required id="image" /><br />
+        <button>ADD LISTING</button>
+      </form>
+    </div>
+  </body>
 </html>
