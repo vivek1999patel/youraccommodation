@@ -1,40 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Owner Home-Page</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link rel="stylesheet" href="/stylesheets/style_new.css" />
-    <link rel="stylesheet" href="/stylesheets/style_nav.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div>
-      <nav id="nav">
-        <h1 id="nav-h1">YOUR ACCOMMODATION</h1>
-        <div>
-          <a class="homepage-links" href="/owners/<%= owner._id %>/new"
-            >ADD LISTING</a
-          >
-          <a class="homepage-links" href="/logout">LOG OUT</a>
-        </div>
-      </nav>
+<%- include('../partials/header') %>
+    <div id="nav">
+      <h1 id="nav-h1">YOUR ACCOMMODATION</h1>
+      <div>
+        <a class="homepage-links" href="/owners/<%= owner._id %>/new"
+          >ADD LISTING</a
+        >
+        <a class="homepage-links" href="/logout">LOG OUT</a>
+      </div>
     </div>
-    <div id="list">
+    <div id="main-section">
       <% owner.properties.forEach(function(p) { %>
-      <div class="list-div">
-        <div id="list-div-div1">
-          <div id="list-div-div1-image">
+      <div class="main-section-div">
+        <div id="main-section-div1">
+          <div id="main-section-div1-image">
             <img src="<%= p.image %>" alt="Image" />
           </div>
-          <div id="list-div-div1-detail">
+          <div id="main-section-div1-detail">
             <div>Address: <%= p.address %></div>
             <div>Move-In-Date: <%= p.moveInDate.toLocaleDateString() %></div>
             <div>Bedrooms: <%= p.bedroom %></div>
@@ -45,12 +26,11 @@
             <div>Rent: $<%= p.rent %></div>
           </div>
         </div>
-        <div id="list-div-div2">
+        <div id="main-section-div2">
           <a href="/owners/<%= p.id %>">Edit</a>
           <a href="/owners/<%= p._id %>?_method=DELETE">Delete</a>
         </div>
       </div>
       <% }) %>
     </div>
-  </body>
-</html>
+<%- include('../partials/footer') %>

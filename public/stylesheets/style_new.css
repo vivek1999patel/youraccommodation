@@ -1,13 +1,16 @@
-body {
+#section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: black;
+  height: 155%;
+  width: 102%;
 }
 
-h2 {
-  margin: 6% 0 20px 0;
+#section h2 {
+  /* height: 10%; */
+  margin: 10px;
   font-size: 30px;
   color: rgb(53, 111, 162);
 }
@@ -17,20 +20,23 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* height: 80%; */
 }
 
 #create-form input {
   margin: 5px;
   height: 4vh;
-  width: 22vw;
+  width: 25vw;
   text-align: center;
   font-size: 17px;
 }
 
 #create-form label {
-  margin-left: 10px;
+  margin-left: 70px;
+  height: 10px;
   color: white;
   font-size: 20px;
+  display: inline;
 }
 
 #create-form input:focus {
