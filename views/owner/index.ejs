@@ -8,14 +8,14 @@
         <a class="homepage-links" href="/logout">LOG OUT</a>
       </div>
     </div>
-    <div id="main-section">
+    <div id="main-section-index">
       <% owner.properties.forEach(function(p) { %>
-      <div class="main-section-div">
-        <div id="main-section-div1">
-          <div id="main-section-div1-image">
+      <div class="main-section-index-div">
+        <div id="main-section-index-div1">
+          <div id="main-section-index-div1-image">
             <img src="<%= p.image %>" alt="Image" />
           </div>
-          <div id="main-section-div1-detail">
+          <div id="main-section-index-div1-detail">
             <div>Address: <%= p.address %></div>
             <div>Move-In-Date: <%= p.moveInDate.toLocaleDateString() %></div>
             <div>Bedrooms: <%= p.bedroom %></div>
@@ -26,7 +26,7 @@
             <div>Rent: $<%= p.rent %></div>
           </div>
         </div>
-        <div id="main-section-div2">
+        <div id="main-section-index-div2">
           <a href="/owners/<%= p.id %>">Edit</a>
           <a href="/owners/<%= p._id %>?_method=DELETE">Delete</a>
         </div>
